@@ -19,3 +19,7 @@
 ## Reiniciar servicios
 
 01 * * * * /opt/gnusocial/scripts/cleanFiles.sh
+
+## Actualizar repositorio con comandos cada 30 minutos
+
+00,30 * * * * cd /opt/gnusocial && git checkout -- . && git checkout HEAD && git pull
